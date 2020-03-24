@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Bot-o-Mat</title>
   <meta name="description" content="Red Ventures Interview Project">
   <meta name="author" content="Lillian Ong">
 
-  <link rel="stylesheet" href="css/style.css?v=1.0">
-  <script src="js/scripts.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="colContainer">
+  <div class="bot col">
   <h1>Bot Battle</h1>
   <h2>Bot 1</h2>
-
   <form>
     <p>
-      <label>Name</label>
+      <label>Name:</label><br>
       <input type = "text"
-      id = "nameInput"
+      id = "nameInput1"
       value = "" />
     </p>
 <!-- Radio buttons for robot model -->
     <p>Model:</p>
-    <input type="radio" id="unipedal" name="Model" value="Unipedal">
+    <input type="radio" id="unipedal" name="Model" value="Unipedal" />
     <label for="unipedal">Unipedal</label><br>
     <input type="radio" id="bipedal" name="Model" value="Bipedal">
     <label for="bipedal">Bipedal</label><br>
@@ -38,15 +37,17 @@
     <input type="radio" id="arachnid" name="Model" value="Arachnid">
     <label for="arachnid">Arachnid</label><br>
 
-    <button id='create'>create</button>
+    <button onclick="logStats(nameInput1)"><h3>create</h3></button>
 
   </form>
+</div>
 
+<div class="bot col">
   <h2>Bot 2</h2>
   <p>
-    <label>Name</label>
+    <label>Name:</label><br>
     <input type = "text"
-    id = "nameInput"
+    id = "nameInput2"
     value = "" />
   </p>
 <!-- Radio buttons for robot model -->
@@ -64,8 +65,20 @@
   <input type="radio" id="arachnid" name="Model" value="Arachnid">
   <label for="arachnid">Arachnid</label><br>
 
-  <button id='create'>create</button><br><br>
-  <button id='beginBattle'>begin the battle</button>
+  <button onclick="logStats(nameInput2)"><h3>create</h3></button>
+</div>
+
+<div class="stat col">
+<h2>The Arena</h2>
+<p>hello</p>
+<p id="stats"></p>
+</div>
+  <button id='beginBattle'><h1>begin the battle</h1></button>
+  <br>
+
+
+
+
 </body>
 
 </html>
