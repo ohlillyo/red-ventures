@@ -30,8 +30,7 @@ export const botTypes = {
     friendly: false,
 };
 
-export const tasks =
-[
+export const tasks = [
   {
     description: 'do the dishes',
     eta: 1000,

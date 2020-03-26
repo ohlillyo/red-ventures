@@ -7,78 +7,84 @@
   <meta name="author" content="Lillian Ong">
 
   <script src="script.js"></script>
+  <!-- <script type="module" src="bots.js"></script> -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="colContainer">
-  <div class="bot col">
-  <h1>Bot Battle</h1>
-  <h2>Bot 1</h2>
-  <form>
-    <p>
-      <label>Name:</label><br>
-      <input type = "text"
-      id = "nameInput1"
-      value = "" />
-    </p>
-<!-- Radio buttons for robot model -->
-    <p>Model:</p>
-    <input type="radio" id="unipedal" name="Model" value="Unipedal" />
-    <label for="unipedal">Unipedal</label><br>
-    <input type="radio" id="bipedal" name="Model" value="Bipedal">
-    <label for="bipedal">Bipedal</label><br>
-    <input type="radio" id="quadrupedal" name="Model" value="Quadrupedal">
-    <label for="quadrupedal">Quadrapedal</label><br>
-    <input type="radio" id="aeronautical" name="Model" value="Aeronautical">
-    <label for="aeronautical">Aeronautical</label><br>
-    <input type="radio" id="radial" name="Model" value="Radial">
-    <label for="radial">Radial</label><br>
-    <input type="radio" id="arachnid" name="Model" value="Arachnid">
-    <label for="arachnid">Arachnid</label><br>
+    <h1>Bot Battle</h1>
+    <!-- Making Bot 1 -->
+    <div class="bot col">
+      <h2>Bot 1</h2>
+      <form name="makeBot1" method="post">
+        <p>
+          <label>Name:</label><br>
+          <input type = "text"
+          id = "nameInput1"
+          value = "" />
+        </p>
+        <!-- Radio buttons for robot model -->
+        <p>Model:</p>
+        <input type="radio" id="unipedal" name="model1" value="Unipedal" />
+        <label for="unipedal">Unipedal</label><br>
+        <input type="radio" id="bipedal" name="model1" value="Bipedal">
+        <label for="bipedal">Bipedal</label><br>
+        <input type="radio" id="quadrupedal" name="model1" value="Quadrupedal">
+        <label for="quadrupedal">Quadrapedal</label><br>
+        <input type="radio" id="aeronautical" name="model1" value="Aeronautical">
+        <label for="aeronautical">Aeronautical</label><br>
+        <input type="radio" id="radial" name="model1" value="Radial">
+        <label for="radial">Radial</label><br>
+        <input type="radio" id="arachnid" name="model1" value="Arachnid">
+        <label for="arachnid">Arachnid</label><br>
 
-    <button onclick="logStats(nameInput1)"><h3>create</h3></button>
+        <!-- <input type="submit" id="bot1" name="createBot1" value="Create" > -->
+        <button type="submit"><h3>create</h3></button>
+      </form>
+    </div>
 
-  </form>
-</div>
+    <div class="bot col">
+      <h2>Bot 2</h2>
+      <form name="makeBot2" method="post">
+        <p>
+          <label>Name:</label><br>
+          <input type = "text"
+          id = "nameInput2"
+          value = "" />
+        </p>
+        <!-- Radio buttons for robot model -->
+        <p>Model:</p>
+        <input type="radio" id="unipedal" name="model2" value="Unipedal">
+        <label for="unipedal">Unipedal</label><br>
+        <input type="radio" id="bipedal" name="model2" value="Bipedal">
+        <label for="bipedal">Bipedal</label><br>
+        <input type="radio" id="quadrupedal" name="model2" value="Quadrupedal">
+        <label for="quadrupedal">Quadrapedal</label><br>
+        <input type="radio" id="aeronautical" name="model2" value="Aeronautical">
+        <label for="aeronautical">Aeronautical</label><br>
+        <input type="radio" id="radial" name="model2" value="Radial">
+        <label for="radial">Radial</label><br>
+        <input type="radio" id="arachnid" name="model2" value="Arachnid">
+        <label for="arachnid">Arachnid</label><br>
 
-<div class="bot col">
-  <h2>Bot 2</h2>
-  <p>
-    <label>Name:</label><br>
-    <input type = "text"
-    id = "nameInput2"
-    value = "" />
-  </p>
-<!-- Radio buttons for robot model -->
-  <p>Model:</p>
-  <input type="radio" id="unipedal" name="Model" value="Unipedal">
-  <label for="unipedal">Unipedal</label><br>
-  <input type="radio" id="bipedal" name="Model" value="Bipedal">
-  <label for="bipedal">Bipedal</label><br>
-  <input type="radio" id="quadrupedal" name="Model" value="Quadrupedal">
-  <label for="quadrupedal">Quadrapedal</label><br>
-  <input type="radio" id="aeronautical" name="Model" value="Aeronautical">
-  <label for="aeronautical">Aeronautical</label><br>
-  <input type="radio" id="radial" name="Model" value="Radial">
-  <label for="radial">Radial</label><br>
-  <input type="radio" id="arachnid" name="Model" value="Arachnid">
-  <label for="arachnid">Arachnid</label><br>
+        <!-- <input type="submit" id="bot1" name="createBot2" value="Create" > -->
+        <button type="submit"><h3>create</h3></button>
 
-  <button onclick="logStats(nameInput2)"><h3>create</h3></button>
-</div>
+      </div>
 
-<div class="stat col">
-<h2>The Arena</h2>
-<p>hello</p>
-<p id="stats"></p>
-</div>
-  <button id='beginBattle'><h1>begin the battle</h1></button>
-  <br>
+      <div class="stat col">
+        <h2>The Arena</h2>
+        <p id="stats1"></p>
+        <p id="stats2"></p>
+      </div>
+
+      <button id='beginBattle'><h1>begin the battle</h1></button>
+      <br>
 
 
 
 
-</body>
+    </body>
 
-</html>
+    </html>
