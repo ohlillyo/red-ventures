@@ -1,4 +1,5 @@
-export const botTypes = {
+export const MODELS = [
+  {
   'Unipedal': {
     maxPoints: false,
     maxTasks: false,
@@ -28,9 +29,10 @@ export const botTypes = {
     maxPoints: true,
     maxTasks: true,
     friendly: false,
-};
+}
+];
 
-export const tasks = [
+export const TASKS = [
   {
     description: 'do the dishes',
     eta: 1000,

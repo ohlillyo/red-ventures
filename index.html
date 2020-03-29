@@ -7,22 +7,21 @@
   <meta name="author" content="Lillian Ong">
 
   <script src="script.js"></script>
-  <!-- <script type="module" src="bots.js"></script> -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="colContainer">
-    <h1>Bot Battle</h1>
+    <div id="header"><h1>Bot Battle</h1></div>
     <!-- Making Bot 1 -->
     <div class="bot col">
       <h2>Bot 1</h2>
-      <form name="makeBot1" method="post">
+      <form id="form1">
         <p>
-          <label>Name:</label><br>
+          <label>Name:</label><br><br>
           <input type = "text"
           id = "nameInput1"
-          value = "" />
+          value = "Ben" />
         </p>
         <!-- Radio buttons for robot model -->
         <p>Model:</p>
@@ -38,20 +37,22 @@
         <label for="radial">Radial</label><br>
         <input type="radio" id="arachnid" name="model1" value="Arachnid">
         <label for="arachnid">Arachnid</label><br>
-
-        <!-- <input type="submit" id="bot1" name="createBot1" value="Create" > -->
-        <button type="submit"><h3>create</h3></button>
+        <!-- Create! -->
+        <div class="buttonWrap">
+        <button type="button" onclick="logStats('stats1')"><h3>create</h3></button>
+      </div>
       </form>
     </div>
 
+    <!-- Making Bot 2 -->
     <div class="bot col">
       <h2>Bot 2</h2>
-      <form name="makeBot2" method="post">
+      <form id="form2">
         <p>
-          <label>Name:</label><br>
+          <label>Name:</label><br><br>
           <input type = "text"
           id = "nameInput2"
-          value = "" />
+          value = "Jerry" />
         </p>
         <!-- Radio buttons for robot model -->
         <p>Model:</p>
@@ -67,22 +68,23 @@
         <label for="radial">Radial</label><br>
         <input type="radio" id="arachnid" name="model2" value="Arachnid">
         <label for="arachnid">Arachnid</label><br>
-
-        <!-- <input type="submit" id="bot1" name="createBot2" value="Create" > -->
-        <button type="submit"><h3>create</h3></button>
+        <!-- Create! -->
+        <div class="buttonWrap">
+        <button type="button" onclick="logStats('stats2')"><h3>create</h3></button>
+      </div>
 
       </div>
 
-      <div class="stat col">
+      <div id="arena" class="statGroup col">
         <h2>The Arena</h2>
-        <p id="stats1"></p>
-        <p id="stats2"></p>
+        <p id="stats1" class="statDisp"></p>
+        <p id="stats2" class="statDisp"></p>
       </div>
 
-      <button id='beginBattle'><h1>begin the battle</h1></button>
-      <br>
-
-
+      <button id='beginBattle' onclick="battleBots('taskDisp','bot1','bot2')">
+        <span id="taskDisp"></span>
+        <h1><span>begin the battle</span></h1>
+      </button>
 
 
     </body>
