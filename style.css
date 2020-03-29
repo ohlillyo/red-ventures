@@ -101,14 +101,11 @@ body {
     outline: 1px solid grey;
     border-radius: 2px;
     box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.5);
-    padding: 0.5em;
     text-align: center;
-    pointer-events: none;
   }
 
   #beginBattle:focus span {
     visibility: hidden;
-    margin: 1em;
   }
 
   #beginBattle:focus #taskDisp {
