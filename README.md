@@ -5,11 +5,16 @@ Bot Battle is a wep page that allows users to initialize robots and have them do
 ## Files
 
 Web Page:
+
 index.html
+
 style.css
+
 script.js
 
+
 Python Script (basic command line functionality):
+
 redVentures.py
 
 ## License
